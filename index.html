@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+            
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -125,8 +126,7 @@
         }
 
         .about {
-            background:
-                linear-gradient(135deg, #3b0764, #be185d, #ea580c);
+            background: linear-gradient(135deg, #3b0764, #be185d, #ea580c);
         }
 
         .about::before {
@@ -152,8 +152,7 @@
         }
 
         .skills {
-            background:
-                linear-gradient(135deg, #064e3b, #0f766e, #0891b2);
+            background: linear-gradient(135deg, #064e3b, #0f766e, #0891b2);
         }
 
         .skills::before {
@@ -176,6 +175,33 @@
             border-radius: 50%;
             bottom: -50px;
             left: -40px;
+        }
+
+        .work {
+            background:
+                linear-gradient(135deg, #111827, #312e81, #581c87);
+        }
+
+        .work::before {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: #6366f133;
+            top: -120px;
+            left: -100px;
+        }
+
+        .work::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border: 3px solid #c084fc33;
+            transform: rotate(30deg);
+            bottom: -100px;
+            right: -60px;
         }
 
         .title {
@@ -211,7 +237,6 @@
 
         .card h3 {
             margin-bottom: 12px;
-            color: #ffffff;
         }
 
         .card p {
@@ -241,7 +266,48 @@
         .skill-card:hover {
             transform: scale(1.05);
             background: linear-gradient(45deg, #06b6d4, #10b981);
-            box-shadow: 0 10px 30px #00000044;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project {
+            background: #ffffff12;
+            border: 1px solid #ffffff22;
+            border-radius: 22px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px #00000055;
+        }
+
+        .project img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 22px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+            color: #c4b5fd;
+        }
+
+        .project-content p {
+            color: #d1d5db;
+            line-height: 1.6;
         }
 
         @keyframes float {
@@ -256,7 +322,16 @@
             }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 800px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .cards,
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+
             .hero h1 {
                 font-size: 2.3rem;
             }
@@ -264,11 +339,6 @@
             .hero img {
                 width: 190px;
                 height: 190px;
-            }
-
-            .cards,
-            .skill-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -339,5 +409,50 @@
         </div>
     </section>
 
+    <section class="work" id="work">
+        <div class="container">
+
+            <h2 class="title">My Work</h2>
+
+            <div class="projects">
+
+                <div class="project">
+                    <img src="webdev.png" alt="Portfolio project">
+                    <div class="project-content">
+                        <h3>Personal Portfolio</h3>
+                        <p>
+                            A responsive portfolio website designed with
+                            colourful patterns, animations and modern layouts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="webdev.png" alt="Web project">
+                    <div class="project-content">
+                        <h3>Creative Web Concept</h3>
+                        <p>
+                            A creative web design concept focused on strong
+                            colours, visual balance and user experience.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="webdev.png" alt="Landing page project">
+                    <div class="project-content">
+                        <h3>Landing Page</h3>
+                        <p>
+                            A modern landing page concept built to be clean,
+                            responsive and visually engaging.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
 </body>
-</html>               
+</html>
