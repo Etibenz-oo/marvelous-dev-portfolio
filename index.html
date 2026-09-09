@@ -1,5 +1,4 @@
-            
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -178,8 +177,7 @@
         }
 
         .work {
-            background:
-                linear-gradient(135deg, #111827, #312e81, #581c87);
+            background: linear-gradient(135deg, #111827, #312e81, #581c87);
         }
 
         .work::before {
@@ -323,22 +321,59 @@
         }
 
         @media (max-width: 800px) {
-            .projects {
-                grid-template-columns: 1fr;
+            section {
+                padding: 80px 16px;
             }
 
+            .container {
+                width: 94%;
+            }
+
+            .projects,
             .cards,
             .skill-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 90vh;
             }
 
             .hero h1 {
                 font-size: 2.3rem;
             }
 
+            .hero p {
+                font-size: 0.98rem;
+            }
+
             .hero img {
                 width: 190px;
                 height: 190px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .card,
+            .skill-card {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero img {
+                width: 165px;
+                height: 165px;
+            }
+
+            .btn {
+                padding: 13px 25px;
             }
         }
     </style>
@@ -348,7 +383,6 @@
 
     <section class="hero">
         <div class="hero-content">
-
             <img src="webdev.png" alt="Web Development Image">
 
             <h1>Hi, I'm <span>Marvelous</span></h1>
@@ -359,17 +393,14 @@
             </p>
 
             <a href="#work" class="btn">Explore My Work</a>
-
         </div>
     </section>
 
     <section class="about" id="about">
         <div class="container">
-
             <h2 class="title">About Me</h2>
 
             <div class="cards">
-
                 <div class="card">
                     <h3>Who I Am</h3>
                     <p>
@@ -387,14 +418,12 @@
                         continuously improving my technical abilities.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <section class="skills" id="skills">
         <div class="container">
-
             <h2 class="title">My Skills</h2>
 
             <div class="skill-grid">
@@ -405,19 +434,17 @@
                 <div class="skill-card">Problem Solving</div>
                 <div class="skill-card">Teamwork</div>
             </div>
-
         </div>
     </section>
 
     <section class="work" id="work">
         <div class="container">
-
             <h2 class="title">My Work</h2>
 
             <div class="projects">
-
                 <div class="project">
-                    <img src="webdev.png" alt="Portfolio project">
+                    <img src="webdev.png" alt="Personal portfolio project">
+
                     <div class="project-content">
                         <h3>Personal Portfolio</h3>
                         <p>
@@ -428,7 +455,8 @@
                 </div>
 
                 <div class="project">
-                    <img src="webdev.png" alt="Web project">
+                    <img src="webdev.png" alt="Creative web project">
+
                     <div class="project-content">
                         <h3>Creative Web Concept</h3>
                         <p>
@@ -440,6 +468,7 @@
 
                 <div class="project">
                     <img src="webdev.png" alt="Landing page project">
+
                     <div class="project-content">
                         <h3>Landing Page</h3>
                         <p>
@@ -448,11 +477,9 @@
                         </p>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
 </body>
-</html>
+</html>                        
